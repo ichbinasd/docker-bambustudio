@@ -12,7 +12,8 @@ LABEL maintainer="thelamer"
 # title
 ENV TITLE=BambuStudio \
     SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
-
+    NO_GAMEPAD=true
+    
 RUN \
   echo "**** add icon ****" && \
   curl -o \
@@ -33,6 +34,7 @@ RUN \
     gstreamer1.0-pulseaudio \
     libosmesa6 \
     libwebkit2gtk-4.1-0 \
+    libgstreamer-plugins-bad1.0  \
     libwx-perl && \
   echo "**** install bambu studio from appimage ****" && \
   if [ -z ${BAMBUSTUDIO_VERSION+x} ]; then \
