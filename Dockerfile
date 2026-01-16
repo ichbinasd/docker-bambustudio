@@ -11,7 +11,7 @@ LABEL maintainer="thelamer"
 
 # title
 ENV TITLE=BambuStudio \
-    SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+    SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt \
     NO_GAMEPAD=true
     
 RUN \
